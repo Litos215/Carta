@@ -1,6 +1,5 @@
 function openLetter() {
-  document.querySelector(".flap").style.transform = "rotateX(180deg)"
-  document.querySelector(".letter").style.transform =
-    "translateX(-50%) translateY(-120px)"
-  document.querySelector(".letter").style.opacity = "1"
+  const envelope = document.getElementById("envelope");
+  // Alterna la clase "open" para abrir/cerrar la carta
+  envelope.classList.toggle("open");
 }
