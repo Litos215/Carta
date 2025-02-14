@@ -1,0 +1,99 @@
+/* Fondo del cuerpo con una imagen */
+body {
+    display: flex;
+    justify-content: center;  /* Centra horizontalmente */
+    align-items: center;  /* Centra verticalmente */
+    height: 100vh;  /* Ocupa toda la pantalla */
+    background-color: #fce4ec; /* Fondo suave */
+    margin: 0;
+}
+
+
+/* Contenedor principal */
+.container {
+    position: relative;
+}
+
+/* Sobre */
+.envelope {
+    width: 1080px;
+    height: 2500px;
+    background-image: url('https://i.imgur.com/tu-imagen.png'); /* Reemplaza con tu imagen */
+    background-size: cover; /* Ajusta la imagen */
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+
+.envelope:hover {
+    transform: scale(1.05);
+}
+
+/* Tapa del sobre */
+.flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: rgba(211, 47, 47, 0.9);
+    border-radius: 5px 5px 0 0;
+    transform-origin: top;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Parte inferior del sobre */
+.body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background-image: url(''); /* Imagen para la parte baja */
+    background-size: cover;
+    border-radius: 0 0 5px 5px;
+}
+
+/* Carta */
+.letter {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 1080px;
+    height: 1920px;
+    background-image: url('https://i.postimg.cc/BvHwQSrf/Whats-App-Image-2025-02-13-at-11-08-19-PM.jpg'); /* Imagen de la carta */
+    background-size: cover;
+    transform: translateX(-50%) translateY(100%);
+    transition: transform 1s ease-in-out 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #c0392b;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    opacity: 0;
+}
+.heart {
+    position: absolute;
+    top: 50px;  /* Ajusta la posición */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    clip-path: path("M50 15 C20 -20 -20 30 50 90 C120 30 80 -20 50 15 Z");
+    animation: pulse 1.5s infinite;
+}
+
+/* Animación del corazón */
+@keyframes pulse {
+    0% { transform: translateX(-50%) scale(1); }
+    50% { transform: translateX(-50%) scale(1.2); }
+    100% { transform: translateX(-50%) scale(1); }
+}
